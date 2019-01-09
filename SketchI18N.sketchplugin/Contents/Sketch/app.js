@@ -5,7 +5,8 @@ var onRun = function(context) {
         command = context.command,
         identifier = command.identifier(),
         resourcesPath = command.pluginBundle().url().path(),
-        language = NSUserDefaults.standardUserDefaults().objectForKey("AppleLanguages").objectAtIndex(0);
+        // language = NSUserDefaults.standardUserDefaults().objectForKey("AppleLanguages").objectAtIndex(0);
+        language = 'zh-Hans-CN' // want 'zh-Hans-CN' when system's preferred language is 'en-CN'
 
     for(;;){
         languagePath = resourcesPath + "/Contents/Resources/i18n/" + language + ".json";
